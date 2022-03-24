@@ -1,16 +1,8 @@
-import MenuItem from "../MenuItem"
-function MenuApp() {
-    let menuItem = {
-        "itemId": 1,
-        "itemPrice": "12",
-        "itemName": "Lasagne",
-        "itemDescription": "Meat and cheese layered between house-made pasta with bell peppers and onions."
-    }
+import Menu from '.../Menu';
+export default function MenuApp({data}) {
     return (
         <div className="App">
-            <MenuItem {...menuItem}></MenuItem>
+            {data.map(item, index) = <Menu {...item} key={index}></Menu>}
         </div>
     )
 }
-
-export default MenuApp
