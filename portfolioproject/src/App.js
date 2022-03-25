@@ -7,6 +7,7 @@ import stylesheet from './components/stylesheet';
 import { Component } from 'react';
 import Navbar from './components/Navbar';
 import {BrowserRouter as Router, Switch, Route} from 'react'
+import './style.css'
 
 function App() {
   return (
