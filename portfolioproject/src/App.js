@@ -5,6 +5,21 @@ import Menu from './components/MenuItem';
 import MenuItem from './components/MenuItem';
 import stylesheet from './components/stylesheet';
 import { Component } from 'react';
+import Navbar from './components/Navbar';
+import {BrowserRouter as Router, Switch, Route} from 'react'
+
+function App() {
+  return (
+    <>
+    <Router>
+      <Navbar />
+      <Switch>
+        <Route path='/' />
+      </Switch>
+    </Router>
+    </>
+  );
+}
 
 class App extends Component {
   render() {
