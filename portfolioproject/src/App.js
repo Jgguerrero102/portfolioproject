@@ -3,6 +3,18 @@ import './App.css'
 import MenuApp from './components/MenuItem';
 import Menu from './components/MenuItem';
 import MenuItem from './components/MenuItem';
+import stylesheet from './components/stylesheet';
+import { Component } from 'react';
+
+class App extends Component {
+  render() {
+    return(
+      <div className='App'>
+          <Stylesheet primary={false}/>
+      </div>
+    )
+  }
+}
 
 const data =
   [

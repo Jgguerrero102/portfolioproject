@@ -1,12 +1,13 @@
 import React from 'react'
 import './style.css'
 
-function stylesheet() {
+function Stylesheet(props) {
+    let className = props.primary ? 'primary' : ''
     return (
         <div>
-        
+            <h1 className={`${className}font`}></h1>
         </div>
     )
 }
 
-export default stylesheet
+export default Stylesheet
