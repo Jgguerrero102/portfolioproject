@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Button, Pressable, StyleSheet, Text, TextInput } from "react-native"
+import { Button, FlatList, Pressable, StyleSheet, Text, TextInput } from "react-native"
 export default function LoginApp() {
     let [loggedin, setLoggedIn] = useState(false)
     let [username, setUsername] = useState("")
@@ -10,6 +10,13 @@ export default function LoginApp() {
         }
         setError(true)
     })
+
+    const [pages, setPages] = useState([
+        {name: 'Home', id: '1'},
+        {name: 'Login', id: '2'}
+    ])
+
+
     return !loggedin ?
         <>
             <Text style={styles.welcome}>Please <Text>Log In</Text></Text>
@@ -20,8 +27,16 @@ export default function LoginApp() {
                 <Text style={styles.text}>Login</Text>
             </Pressable>
             <Button title="Login" onPress={() => doLogin()}></Button>
+            <View style={styles.container}>
+            <FlatList data={pages} renderitem={({item}) => (
+                <Text style={styles.item}>{item.name}</Text>
+            )}/>
+            
+        </View>
         </>
         : <Text>Welcome User</Text>
+
+        
 }
 
 const styles = StyleSheet.create({
