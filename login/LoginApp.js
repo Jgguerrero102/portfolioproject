@@ -61,4 +61,10 @@ const styles = StyleSheet.create({
         padding: 5,
         margin: 5
     },
+    container: {
+        flex: 1,
+        backgroundColor: '#00ffff',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
 });
